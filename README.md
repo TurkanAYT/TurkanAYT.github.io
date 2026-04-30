@@ -63,22 +63,6 @@ Bu repo, kişisel portfolio web sitemin kaynak kodlarını içermektedir. Sitemd
 
 ---
 
-## 📥 Yerelde Çalıştırma
-
-Projeyi kendi bilgisayarında çalıştırmak için:
-
-# Repoyu klonla
-git clone https://github.com/TurkanAYT/zeynep-turkan-aytac.github.io.git
-
-# Proje klasörüne gir
-cd zeynep-turkan-aytac.github.io
-
-# Herhangi bir live server ile aç (VS Code Live Server, Python HTTP server vb.)
-# Örneğin Python ile:
-python -m http.server 8000
-
-Ardından http://localhost:8000 adresini ziyaret et.
-
 📧 İletişim
 E-posta: zeynepturkanaytac@gmail.com
 
