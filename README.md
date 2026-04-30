@@ -66,11 +66,9 @@ Bu repo, kişisel portfolio web sitemin kaynak kodlarını içermektedir. Sitemd
 📧 İletişim
 E-posta: zeynepturkanaytac@gmail.com
 
-GitHub: github.com/TurkanAYT
+GitHub: https://github.com/TurkanAYT
 
-LinkedIn: linkedin.com/in/zeynep-turkan-aytac
-
-Instagram: @zeynep61turkan
+LinkedIn: https://www.linkedin.com/in/zeynep-turkan-aytac/
 
 📄 Lisans
 Bu proje MIT License ile lisanslanmıştır.
