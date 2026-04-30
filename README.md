@@ -9,18 +9,18 @@ Bu repo, kişisel portfolio web sitemin kaynak kodlarını içermektedir. Sitemd
 ---
 
 ## 📂 Proje Yapısı
-portfolio/
-├── index.html # Ana sayfa
-├── hakkimda.html # Hakkımda sayfası
-├── projeler.html # Projeler sayfası (filtrelemeli)
-├── iletisim.html # İletişim sayfası
-├── proje-detay.html # Proje detay sayfası (video/resim slaytlı)
-├── style.css # Tüm stiller (dark/light mode)
-├── script.js # Dinamik işlevler
-├── images/ # Proje ve profil görselleri
-├── videos/ # Proje demo videoları
-├── files/ # CV PDF dosyası
-└── README.md
+
+- `index.html` - Ana sayfa
+- `hakkimda.html` - Hakkımda sayfası
+- `projeler.html` - Projeler sayfası (filtrelemeli)
+- `iletisim.html` - İletişim sayfası
+- `proje-detay.html` - Proje detay sayfası (video/resim slaytlı)
+- `style.css` - Tüm stiller (dark/light mode)
+- `script.js` - Dinamik işlevler
+- `images/` - Proje ve profil görselleri
+- `videos/` - Proje demo videoları
+- `files/` - CV PDF dosyası
+- `README.md` - Proje dokümantasyonu
 
 
 ---
