@@ -70,10 +70,8 @@ GitHub: https://github.com/TurkanAYT
 
 LinkedIn: https://www.linkedin.com/in/zeynep-turkan-aytac/
 
-📄 Lisans
-Bu proje MIT License ile lisanslanmıştır.
+📄 Bu proje MIT License ile lisanslanmıştır.
 
-🙏 Teşekkür
-Projemi incelediğiniz için teşekkür ederim. Geri bildirimleriniz benim için değerlidir.
+🙏 Projemi incelediğiniz için teşekkür ederim. Geri bildirimleriniz benim için değerlidir.
 
 © 2025 Zeynep Türkan Aytaç - Tüm hakları saklıdır.
