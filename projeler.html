@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeler | Zeynep Türkan Aytaç</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">ZTA</a>
+            </div>
+            <!-- Dark/Light Mode Toggle -->
+            <div class="theme-toggle">
+                <i class="fa-solid fa-sun"></i>
+                <i class="fa-solid fa-moon"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hakkimda.html">Hakkımda</a></li>
+                <li><a href="projeler.html" class="active">Projeler</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Projelerim</h1>
+                <p>Web, mobil, yapay zeka ve sistem programlama alanlarında geliştirdiğim projeler</p>
+            </div>
+        </section>
+
+        <section class="projects-section">
+            <div class="container">
+                <!-- Filtre Butonları -->
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Tümü</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="ai">Yapay Zeka</button>
+                    <button class="filter-btn" data-filter="system">Sistem / Masaüstü</button>
+                    <button class="filter-btn" data-filter="security">Güvenlik</button>
+                </div>
+
+                <!-- Projeler Grid -->
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Proje 1 -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="images/findora.jpg" alt="FINDORA" onerror="this.src='https://placehold.co/600x400?text=FINDORA'">
+                        </div>
+                        <div class="project-info">
+                            <h3>FINDORA</h3>
+                            <p class="project-cat">Web | Okul Ödevi</p>
+                            <p class="project-desc">Kullanıcıların kayıp eşyalarını bildirebildiği ve bulan kişilerin iletişime geçebildiği web platformu.</p>
+                            <div class="project-tech">
+                                <span>Python/Django</span><span>SQLite</span><span>HTML/CSS/JS</span>
+                            </div>
+                            <a href="proje-detay.html?id=findora" class="btn-detail">Detaylı İncele →</a>
+                        </div>
+                    </div>
+
+                    <!-- Proje 2 -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="images/kentyemek.jpg" alt="Ortahisar Kent Yemek" onerror="this.src='https://placehold.co/600x400?text=Kent+Pazarı'">
+                        </div>
+                        <div class="project-info">
+                            <h3>Ortahisar Kent Yemek Dijital Pazarı</h3>
+                            <p class="project-cat">Web | Staj Projesi</p>
+                            <p class="project-desc">Yöresel ürünlerin çevrim içi satışı için geliştirilmiş e-ticaret platformu.</p>
+                            <div class="project-tech">
+                                <span>Python/Django</span><span>MySQL</span><span>HTML/CSS/JS</span>
+                            </div>
+                            <a href="proje-detay.html?id=kentpazari" class="btn-detail">Detaylı İncele →</a>
+                        </div>
+                    </div>
+
+                    <!-- Proje 3 -->
+                    <div class="project-card" data-category="security">
+                        <div class="project-img">
+                            <img src="images/bize-mesaj.jpg" alt="Bize Mesaj" onerror="this.src='https://placehold.co/600x400?text=Bize+Mesaj'">
+                        </div>
+                        <div class="project-info">
+                            <h3>Bize Mesaj</h3>
+                            <p class="project-cat">Güvenlik | Okul Ödevi</p>
+                            <p class="project-desc">LSB steganografi, DES şifreleme ve çevrimdışı mesaj desteği sunan sohbet uygulaması.</p>
+                            <div class="project-tech">
+                                <span>Python/Tkinter</span><span>DES</span><span>Steganografi</span>
+                            </div>
+                            <a href="proje-detay.html?id=bizemesaj" class="btn-detail">Detaylı İncele →</a>
+                        </div>
+                    </div>
+
+                    <!-- Proje 4 -->
+                    <div class="project-card" data-category="ai">
+                        <div class="project-img">
+                            <img src="images/neurolab.jpg" alt="NeuroLab" onerror="this.src='https://placehold.co/600x400?text=NeuroLab'">
+                        </div>
+                        <div class="project-info">
+                            <h3>NeuroLab</h3>
+                            <p class="project-cat">Yapay Zeka | Okul Ödevi</p>
+                            <p class="project-desc">Sinir ağları ile sınıflandırma/regresyon görselleştirmesi, MNIST tanıma ve oto-kodlayıcı deneyleri.</p>
+                            <div class="project-tech">
+                                <span>C++</span><span>Yapay Sinir Ağları</span><span>MNIST</span>
+                            </div>
+                            <a href="proje-detay.html?id=neurolab" class="btn-detail">Detaylı İncele →</a>
+                        </div>
+                    </div>
+
+                    <!-- Proje 5 -->
+                    <div class="project-card" data-category="system">
+                        <div class="project-img">
+                            <img src="images/reyetap.jpg" alt="ReYeTaP" onerror="this.src='https://placehold.co/600x400?text=ReYeTaP'">
+                        </div>
+                        <div class="project-info">
+                            <h3>ReYeTaP</h3>
+                            <p class="project-cat">Sistem | Okul Ödevi</p>
+                            <p class="project-desc">Müşteri, restoran ve mutfak olarak üç uygulamadan oluşan restoran yönetim sistemi.</p>
+                            <div class="project-tech">
+                                <span>C</span><span>Sipariş Takibi</span><span>Kuyruk Yapısı</span>
+                            </div>
+                            <a href="proje-detay.html?id=reyetap" class="btn-detail">Detaylı İncele →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-social">
+                <a href="https://github.com/TurkanAYT" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/zeynep-turkan-aytac" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://instagram.com/zeynep61turkan" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:zeynepturkanaytac@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="footer-copyright">© 2025 Zeynep Türkan Aytaç. Tüm hakları saklıdır.</p>
+        </div>
+        <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

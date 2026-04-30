@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proje Detay | Zeynep Türkan Aytaç</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">ZTA</a>
+            </div>
+            <!-- Dark/Light Mode Toggle -->
+            <div class="theme-toggle">
+                <i class="fa-solid fa-sun"></i>
+                <i class="fa-solid fa-moon"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hakkimda.html">Hakkımda</a></li>
+                <li><a href="projeler.html" class="active">Projeler</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 id="projeAdi">Proje Adı</h1>
+                <p id="projeKategori">Kategori | Proje Tipi</p>
+            </div>
+        </section>
+
+        <section class="project-detail-section">
+            <div class="container">
+                <div class="project-detail-grid">
+                    <!-- Video/Resim Slider Alanı -->
+                    <div class="project-detail-image">
+                        <div class="slider-container">
+                            <div class="slider-main" id="sliderMain">
+                                <!-- Dinamik olarak içerik eklenecek -->
+                            </div>
+                            <button class="slider-btn prev" id="prevBtn">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="slider-btn next" id="nextBtn">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="slider-dots" id="sliderDots"></div>
+                            <div class="slider-counter" id="sliderCounter">1 / 1</div>
+                        </div>
+                    </div>
+                    <div class="project-detail-content">
+                        <h2>Proje Hakkında</h2>
+                        <p id="projeAciklama">Proje detaylı açıklaması burada olacak.</p>
+                        
+                        <h3>Kullanılan Teknolojiler</h3>
+                        <div class="detail-tech" id="projeTeknolojiler"></div>
+                        
+                        <h3>Nasıl Çalıştırılır</h3>
+                        <p id="projeCalistirma">Projenin nasıl çalıştırılacağına dair bilgiler burada olacak.</p>
+                        
+                        <div class="project-links" id="projeLinkler">
+                            <a href="#" class="btn btn-primary" id="githubLink" target="_blank">GitHub'da İncele</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-social">
+                <a href="https://github.com/TurkanAYT" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/zeynep-turkan-aytac" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://instagram.com/zeynep61turkan" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:zeynepturkanaytac@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="footer-copyright">© 2025 Zeynep Türkan Aytaç. Tüm hakları saklıdır.</p>
+        </div>
+        <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // URL'den proje ID'sini al
+        const urlParams = new URLSearchParams(window.location.search);
+        const projeId = urlParams.get('id');
+        
+        // Proje veritabanı (burayı script.js'den alıyoruz)
+        const projeDetaylari = {
+            findora: {
+                ad: "FINDORA – Kayıp Eşya Bulma Platformu",
+                kategori: "Web | Okul Ödevi",
+                aciklama: "FINDORA, kullanıcıların kaybettikleri eşyaları bildirebilecekleri ve bulan kişilerin sahipleri ile iletişime geçebilecekleri web tabanlı bir platformdur. Proje kapsamında kullanıcı girişi, ilan oluşturma, arama filtreleme ve mesajlaşma özellikleri geliştirilmiştir. Django framework'ü ile hızlı prototipleme yapılmış, SQLite ile veritabanı yönetimi sağlanmıştır.",
+                calistirma: "=== KURULUM ADIMLARI ===\n\n1. Python ve Django kurulu olmalı.\n2. Projeyi klonlayın: git clone [repo-url]\n3. Sanal ortam oluşturun: python -m venv venv\n4. Gerekli paketleri yükleyin: pip install -r requirements.txt\n5. Veritabanı migrasyonlarını çalıştırın: python manage.py migrate\n6. Sunucuyu başlatın: python manage.py runserver (eğer default olan 8000 port'u çalışırken hata verirse python manage.py runserver 8080 gibi farklı bir port deneyin)\n7. Tarayıcıda http://localhost:8000/ (veya seçtiğiniz port) adresine gidin.",
+                teknolojiler: ["Python", "Django", "SQLite", "HTML5", "CSS3", "JavaScript"],
+                github: "https://github.com/TurkanAYT/findora",
+                medyalar:
+                [
+                    {type: "image", src: "images/findora1.jpg", alt: "FINDORA Ana Sayfa"},
+                    {type: "image", src: "images/findora2.jpg", alt: "FINDORA İlan Oluşturma"},
+                    {type: "image", src: "images/findora3.jpg", alt: "FINDORA Arama Sonuçları"},
+                    {type: "image", src: "images/findora4.jpg", alt: "FINDORA Detay Sayfası"},
+                    {type: "image", src: "images/findora5.jpg", alt: "FINDORA Mesajlaşma Ekranı"},
+                    {type: "image", src: "images/findora6.jpg", alt: "FINDORA Admin Paneli"}
+                ]
+            },
+            kentpazari: {
+                ad: "Ortahisar Kent Yemek Dijital Pazarı",
+                kategori: "Web | Staj Projesi",
+                aciklama: "Trabzon Ortahisar Belediyesi Bilgi İşlem Birimi'nde staj yaparken geliştirdiğim e-ticaret platformudur. Yöresel lezzetlerden hediyelik eşyalara kadar ürünlerin çevrim içi görüntülenip sipariş edilebildiği, admin paneli ile stok ve sipariş takibinin yapıldığı tam kapsamlı bir sistemdir.",
+                calistirma: "=== KURULUM ADIMLARI ===\n\n1. MySQL Kurulumu:\n- https://dev.mysql.com/downloads/installer/ adresinden MySQL Installer indir\n- 'Developer Default' kurulum tipini seç\n- Root şifre belirle (not et!)\n- MySQL Workbench ile 'CREATE DATABASE kent_pazari;' komutunu çalıştır\n\n2. Django Projesi:\n- pip install django mysqlclient\n- git clone [proje-adresi]\n- cd kent-pazari\n\n3. settings.py düzenle:\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.mysql',\n        'NAME': 'kent_pazari',\n        'USER': 'root',\n        'PASSWORD': 'sifreniz',\n        'HOST': 'localhost',\n        'PORT': '3306',\n    }\n}\n\n4. Migrate & Run:\n- python manage.py makemigrations\n- python manage.py migrate\n- python manage.py createsuperuser\n- python manage.py runserver\n\n5. http://127.0.0.1:8000 adresine git. (eğer default olan 8000 port'u çalışırken hata verirse python manage.py runserver 8080 gibi farklı bir port deneyin) ",
+                teknolojiler: ["Python", "Django", "MySQL", "HTML5", "CSS3", "Bootstrap", "JavaScript"],
+                github: "https://github.com/TurkanAYT/Ortahisar-Kent-Yemek-Dijital-Pazar-",
+                medyalar: [
+                    {type: "video", src: "images/kentyemek_video.mp4" },
+                    {type: "image", src: "images/kentyemek1.jpg", alt: "Kent Yemek Ana Sayfa"},
+                    {type: "image", src: "images/kentyemek2.jpg", alt: "Kent Yemek Ürün Detay"},
+                    {type: "image", src: "images/kentyemek3.jpg", alt: "Kent Yemek Admin Paneli"}
+                ]
+            },
+            bizemesaj: {
+                ad: "Bize Mesaj – Çok Kullanıcılı Güvenli Sohbet Uygulaması",
+                kategori: "Güvenlik | Okul Ödevi",
+                aciklama: "LSB steganografi ile görsele gömülü parola ile kimlik doğrulama, DES şifreleme ve çevrimdışı mesaj desteği sunan çok kullanıcılı bir sohbet uygulamasıdır. Socket programlama ile gerçek zamanlı mesajlaşma sağlanmıştır.",
+                calistirma: "1. Python yüklü olmalı.\n2. Gerekli kütüphaneler: tkinter, socket, threading, Crypto (pycryptodome), PIL\n3. server ve client klasörleri için ayrı ayrı terminaller açın.\n4. server için açtığınız terminale sırası ile şu kodları girin:\n   - Set-ExecutionPolicy Unrestricted -Scope CurrentUser\n   - .\.venv\Scripts\activate\n - pip install django requests pillow pycryptodome\n - pip install djangorestframework\n - python manage.py runserver 8001\n5. client için açtığınız terminale sırası ile şu kodları girin:\n   - Set-ExecutionPolicy Unrestricted -Scope CurrentUser\n   - ..\server\.venv\Scripts\activate\n - python client.py\n6. Açılan client uygulamasında kullanıcı adı, parola ile giriş yapın. (eğer hesabınız yoksa kayıt olunuz.)\n7. Yine client klasörü için başka bir terminalde ikinci bir client çalıştırarak farklı bir kullanıcı adı ve o kullanıcının parolası ile giriş yapın.\n8. İki client arasında güvenli bir şekilde mesajlaşmaya başlayabilirsiniz.",
+                teknolojiler: ["Python", "Tkinter", "DES Şifreleme", "LSB Steganografi", "Socket Programlama"],
+                github: "https://github.com/TurkanAYT/bize_mesaj",
+                medyalar: [
+                    { type: "image", src: "images/bize-mesaj1.jpg" },
+                    { type: "image", src: "images/bize-mesaj2.jpg" },
+                    { type: "image", src: "images/bize-mesaj3.jpg" },
+                    { type: "image", src: "images/bize-mesaj4.jpg" },
+                    { type: "image", src: "images/bize-mesaj5.jpg" },
+                    { type: "image", src: "images/bize-mesaj6.jpg" }
+                ]
+            },
+            neurolab: {
+                ad: "NeuroLab – Yapay Sinir Ağı Eğitim Projesi",
+                kategori: "Yapay Zeka | Okul Ödevi",
+                aciklama: "Tek ve çok katmanlı sinir ağları ile sınıflandırma/regresyon problemlerini 2B uzayda görselleştiren, MNIST rakam tanıma ve oto-kodlayıcı ile transfer öğrenme deneylerini içeren bir masaüstü uygulamasıdır.",
+                calistirma: "=== PROJEYİ ÇALIŞTIRMAK İÇİN ===\n\n1. Gereksinimler:\n   - Visual Studio 2019 veya daha yeni bir sürüm\n   - C++ geliştirme araçları (Desktop development with C++)\n\n2. Projeyi Açma:\n   - 'MnisYSAProjesi' klasörüne gidin\n   - İçindeki .sln (Solution) dosyasını çift tıklayarak Visual Studio ile açın\n\n3. Derleme ve Çalıştırma:\n   - Visual Studio'da F5 tuşuna basın veya 'Yerel Windows Hata Ayıklayıcısı' butonuna tıklayın\n   - Veya menüden: Derleme > Çözümü Derle (Build > Build Solution)\n\n4. Farklı Ağ Mimarilerini Denemek İçin:\n   - 'Tek Katmanlı Ağ (Single Layer FCN)' klasörü -> .sln dosyasını açın\n   - 'Çok Katmanlı Ağ (Multi Layer FCN)' klasörü -> .sln dosyasını açın\n   - Her biri ayrı bir Visual Studio projesidir, istediğinizi ayrı ayrı çalıştırabilirsiniz\n\n5. Not:\n   - MNIST veri seti proje içinde hazır olarak gelmektedir, ayrıca indirmenize gerek yoktur\n   - İlk çalıştırmada derleme süresi 1-2 dakika sürebilir",
+                teknolojiler: ["C++", "Yapay Sinir Ağları", "MNIST", "2D Görselleştirme"],
+                github: "#",
+                medyalar: [
+                    { type: "image", src: "images/neurolab1.jpg" },
+                    { type: "image", src: "images/neurolab2.jpg" },
+                    { type: "image", src: "images/neurolab3.jpg" },
+                    { type: "image", src: "images/neurolab4.jpg" },
+                    { type: "image", src: "images/neurolab5.jpg" },
+                    { type: "image", src: "images/neurolab6.jpg" },
+                    { type: "image", src: "images/neurolab7.jpg" },
+                    { type: "image", src: "images/neurolab8.jpg" },
+                    { type: "image", src: "images/neurolab9.jpg" }
+                ]
+            },
+            reyetap: {
+                ad: "ReYeTaP – Restoran Yemek Takip Sistemi (ZEDA Sepeti)",
+                kategori: "Sistem | Okul Ödevi",
+                aciklama: "Müşteri, Restoran ve Mutfak olmak üzere üç ayrı uygulamadan oluşan restoran yönetim sistemidir. Sipariş takibi, analiz raporları ve aşçı kuyruk mantığı ile hazırlanma süresi hesaplama özelliklerini içerir. (kuyruk yapısı henüz tam anlamıyla gerçekleştirilememiştir. en kısa sürede tamamlanacaktır.)",
+                calistirma: "1. C derleyicisi (gcc) kurulu olmalı.\n2. Klasörleri açarak bin\\Debug klasörüne girin.\n3. Her uygulama için ayrı ayrı exe'ler bulunmaktadır. Onları çalıştırabilirsiniz.",
+                teknolojiler: ["C", "POSIX Threads", "Kuyruk Yapıları", "IPC"],
+                github: "https://github.com/TurkanAYT/ZEDAsepeti",
+                medyalar: [
+                    { type: "image", src: "images/reyetap1.jpg" },
+                    { type: "image", src: "images/reyetap2.jpg" },
+                    { type: "image", src: "images/reyetap3.jpg" },
+                    { type: "image", src: "images/reyetap4.jpg" },
+                    { type: "image", src: "images/reyetap5.jpg" },
+                    { type: "image", src: "images/reyetap6.jpg" },
+                    { type: "image", src: "images/reyetap7.jpg" },
+                    { type: "image", src: "images/reyetap8.jpg" },
+                    { type: "image", src: "images/reyetap9.jpg" },
+                    { type: "image", src: "images/reyetap10.jpg" },
+                    { type: "image", src: "images/reyetap11.jpg" },
+                    { type: "image", src: "images/reyetap12.jpg" },
+                    { type: "image", src: "images/reyetap13.jpg" },
+                    { type: "image", src: "images/reyetap14.jpg" }
+                ]
+            }
+        };
+        
+        let currentMedya = [];
+        let currentIndex = 0;
+        let currentVideo = null;  // video elementini takip et
+        
+        if(projeId && projeDetaylari[projeId]) {
+            const proje = projeDetaylari[projeId];
+            document.getElementById('projeAdi').textContent = proje.ad;
+            document.getElementById('projeKategori').textContent = proje.kategori;
+            document.getElementById('projeAciklama').textContent = proje.aciklama;
+            document.getElementById('projeCalistirma').textContent = proje.calistirma;
+            
+            const techContainer = document.getElementById('projeTeknolojiler');
+            techContainer.innerHTML = proje.teknolojiler.map(tech => `<span class="tech-tag">${tech}</span>`).join('');
+            
+            const githubLink = document.getElementById('githubLink');
+            if(proje.github && proje.github !== '#') {
+                githubLink.href = proje.github;
+                githubLink.innerHTML = '<i class="fab fa-github"></i> GitHub\'da İncele';
+                githubLink.style.opacity = '1';
+                githubLink.style.cursor = 'pointer';
+            } else {
+                githubLink.href = 'javascript:void(0);';
+                githubLink.innerHTML = '<i class="fas fa-clock"></i> Link Henüz Hazır Değil';
+                githubLink.style.opacity = '0.6';
+                githubLink.style.cursor = 'not-allowed';
+                githubLink.removeAttribute('target');
+            }
+            
+            currentMedya = proje.medyalar || [{ type: "image", src: "images/placeholder.jpg" }];
+            setupSlider();
+        }
+        
+        function setupSlider() {
+            const sliderMain = document.getElementById('sliderMain');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const sliderDots = document.getElementById('sliderDots');
+            const sliderCounter = document.getElementById('sliderCounter');
+            
+            function updateSlider() {
+                const medya = currentMedya[currentIndex];
+                sliderMain.innerHTML = '';
+                
+                if(medya.type === 'video') {
+                    const videoElement = document.createElement('video');
+                    videoElement.src = medya.src;
+                    videoElement.poster = medya.poster || '';
+                    videoElement.controls = true;
+                    videoElement.autoplay = false;
+                    videoElement.style.width = '100%';
+                    videoElement.style.height = '100%';
+                    videoElement.style.objectFit = 'contain';
+                    videoElement.style.backgroundColor = 'var(--bg2)';
+                    sliderMain.appendChild(videoElement);
+                    currentVideo = videoElement;
+                } else {
+                    const imgElement = document.createElement('img');
+                    imgElement.src = medya.src;
+                    imgElement.alt = `Proje Görseli ${currentIndex + 1}`;
+                    imgElement.onerror = function() {
+                        this.src = 'https://placehold.co/800x500?text=Görsel+Hazırlanıyor';
+                    };
+                    sliderMain.appendChild(imgElement);
+                    currentVideo = null;
+                }
+                
+                sliderCounter.textContent = `${currentIndex + 1} / ${currentMedya.length}`;
+                
+                const dots = document.querySelectorAll('.dot');
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === currentIndex);
+                });
+            }
+            
+            function nextMedya() {
+                if(currentVideo) {
+                    currentVideo.pause();
+                }
+                currentIndex = (currentIndex + 1) % currentMedya.length;
+                updateSlider();
+            }
+            
+            function prevMedya() {
+                if(currentVideo) {
+                    currentVideo.pause();
+                }
+                currentIndex = (currentIndex - 1 + currentMedya.length) % currentMedya.length;
+                updateSlider();
+            }
+            
+            sliderDots.innerHTML = '';
+            for(let i = 0; i < currentMedya.length; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'dot';
+                const medya = currentMedya[i];
+                dot.title = medya.type === 'video' ? 'Video' : 'Resim';
+                dot.addEventListener('click', () => {
+                    if(currentVideo) currentVideo.pause();
+                    currentIndex = i;
+                    updateSlider();
+                });
+                sliderDots.appendChild(dot);
+            }
+            
+            prevBtn.addEventListener('click', prevMedya);
+            nextBtn.addEventListener('click', nextMedya);
+            
+            document.addEventListener('keydown', (e) => {
+                if(e.key === 'ArrowLeft') prevMedya();
+                if(e.key === 'ArrowRight') nextMedya();
+            });
+            
+            updateSlider();
+        }
+    </script>
+</body>
+</html>

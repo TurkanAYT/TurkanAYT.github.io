@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Zeynep Türkan Aytaç | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">ZTA</a>
+            </div>
+            <!-- Dark/Light Mode Toggle -->
+            <div class="theme-toggle">
+                <i class="fa-solid fa-sun"></i>
+                <i class="fa-solid fa-moon"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Ana Sayfa</a></li>
+                <li><a href="hakkimda.html">Hakkımda</a></li>
+                <li><a href="projeler.html">Projeler</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-image">
+                    <div class="image-placeholder">
+                        <img src="images/profil.jpg" alt="Zeynep Türkan Aytaç" onerror="this.src='https://placehold.co/400x400?text=Profil+Fotoğrafı'">
+                    </div>
+                </div>
+                <div class="hero-content">
+                    <h1>Zeynep Türkan Aytaç</h1>
+                    <p class="hero-title">Bilgisayar Mühendisliği 3. Sınıf Öğrencisi | Full Stack Geliştirme Adayı</p>
+                    <p class="hero-description">
+                        Karadeniz Teknik Üniversitesi Bilgisayar Mühendisliği 3. sınıf öğrencisiyim. 
+                        C ve Python'da ileri seviye, C#, C++ ve Kotlin'de orta seviye bilgiye sahibim. 
+                        SQLite ve MySQL'de deneyimliyim. Trabzon Ortahisar Belediyesi Bilgi İşlem Birimi'nde 
+                        staj yaparak e-ticaret sitesi projesi geliştirdim. Web geliştirme ve programlama 
+                        alanında güçlüyüm; yapay zekâ ve mobil teknolojiler alanında kendimi geliştirmeye devam ediyorum.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="projeler.html" class="btn btn-primary">Projelerimi Gör</a>
+                        <a href="iletisim.html" class="btn btn-secondary">İletişim</a>
+                        <a href="files/Zeynep_Turkan_AYTAÇ_Ozgecmis_Dosyasi.pdf" class="btn btn-outline" download>
+                        <i class="fas fa-download"></i> Özgeçmişimi İndir
+                        </a>    
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Yatay Kayar İlgi Alanları Şeridi -->
+        <div class="ticker-wrapper">
+            <div class="ticker">
+                <div class="ticker-track">
+                    <span>Full Stack Geliştirme</span>
+                    <span>Yapay Zekâ</span>
+                    <span>C</span>
+                    <span>C++</span>
+                    <span>C#</span>
+                    <span>Python</span>
+                    <span>Kotlin</span>
+                    <span>HTML/CSS/JS</span>
+                    <span>Mobil Programlama</span>
+                    <span>Bilgisayar Ağları</span>
+                    <!-- Tekrar için aynıları ekleniyor -->
+                    <span>Full Stack Geliştirme</span>
+                    <span>Yapay Zekâ</span>
+                    <span>C</span>
+                    <span>C++</span>
+                    <span>C#</span>
+                    <span>Python</span>
+                    <span>Kotlin</span>
+                    <span>HTML/CSS/JS</span>
+                    <span>Mobil Programlama</span>
+                    <span>Bilgisayar Ağları</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-social">
+                <a href="https://github.com/TurkanAYT" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/zeynep-turkan-aytac" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://instagram.com/zeynep61turkan" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:zeynepturkanaytac@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="footer-copyright">© 2025 Zeynep Türkan Aytaç. Tüm hakları saklıdır.</p>
+        </div>
+        <button class="scroll-top" id="scrollTop">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
