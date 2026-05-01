@@ -4,7 +4,7 @@
 
 Bu repo, kişisel portfolio web sitemin kaynak kodlarını içermektedir. Sitemde kendimi, yeteneklerimi ve geliştirdiğim projeleri tanıtıyorum.
 
-🔗 **Canlı Site:** [https://zeynep-turkan-aytac.github.io](https://zeynep-turkan-aytac.github.io)
+🔗 **Canlı Site:** [https://turkanayt.github.io](https://turkanayt.github.io)
 
 ---
 
