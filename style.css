@@ -302,7 +302,7 @@ body.light .navbar.scrolled {
 }
 
 /* Mobile menü - full screen overlay */
-@media (max-width: 1600px) {
+@media (max-width: 768px) {
     .hamburger {
         display: flex;
     }
@@ -348,12 +348,12 @@ body.light .navbar.scrolled {
     .nav-links.active li:nth-child(4) { transition-delay: 0.4s; }
     
     .nav-links a {
-        font-size: 0.85rem;
+        font-size: 1.3rem;
         font-weight: 600;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.05em;
     }
     
-    /* Sayfa içeriği menü açıkken hafif karartma opsiyonel */
+    /* Sayfa içeriği menü açıkken kaydırmayı engelle */
     body.menu-open {
         overflow: hidden;
     }
@@ -379,6 +379,11 @@ body.light .navbar.scrolled {
     .nav-links li {
         opacity: 1;
         transform: none;
+    }
+    
+    /* Desktop'ta hero yüksekliği normal */
+    .hero {
+        min-height: calc(100vh - 80px);
     }
 }
 
@@ -1765,4 +1770,51 @@ video::-webkit-media-controls-current-time-display,
 video::-webkit-media-controls-time-remaining-display,
 video::-webkit-media-controls-mute-button {
     filter: invert(1);
+}
+
+/* ========== MOBİL KAYDIRMA SORUNU KESİN ÇÖZÜM ========== */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+body {
+    overflow-y: auto !important;
+    height: auto !important;
+    min-height: 100vh;
+}
+
+/* Mobilde hero section'ın yüksekliğini düzelt */
+@media (max-width: 768px) {
+    html, body {
+        height: auto !important;
+        overflow-y: auto !important;
+    }
+    
+    .hero {
+        min-height: auto !important;
+        height: auto !important;
+        padding: 2rem 0 4rem;
+        overflow-y: visible;
+    }
+    
+    .hero-container {
+        height: auto;
+        min-height: auto;
+    }
+    
+    main {
+        overflow-y: visible;
+        height: auto;
+        flex: 1;
+    }
+    
+    /* Scroll butonunu mobilde daha küçük yap */
+    .scroll-top {
+        width: 36px;
+        height: 36px;
+        bottom: 1rem;
+        right: 1rem;
+    }
 }
